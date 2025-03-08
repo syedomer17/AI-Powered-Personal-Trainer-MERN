@@ -33,6 +33,31 @@ An intelligent fitness companion designed to personalize your workout experience
 
 ---
 
+## 🛠 Tech Stack
+
+### Frontend:
+- **React** (with Vite) – Fast frontend development
+- **react-router-dom** – Client-side navigation
+- **Framer Motion** – Smooth animations
+- **GSAP** – Advanced animations
+- **React-Toastify** – Beautiful notifications
+- **Axios** – API requests
+- **Tailwind CSS** – Modern styling
+
+### Backend:
+- **Node.js** – Backend runtime
+- **Express.js** – Server-side framework
+- **MongoDB & Mongoose** – NoSQL database & modeling
+- **bcrypt** – Password hashing
+- **config** – Configuration management
+- **cors** – Cross-Origin Resource Sharing
+- **express-rate-limit** – API rate limiting
+- **jsonwebtoken (JWT)** – Secure authentication tokens
+- **nodemailer** – Email handling
+- **nodemon** – Auto-restarting server
+
+---
+
 ## 📦 Installation
 
 ```bash
