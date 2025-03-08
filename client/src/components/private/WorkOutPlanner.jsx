@@ -21,6 +21,13 @@ function WorkoutPlanner() {
     localStorage.getItem("userAllergy") || ""
   );
 
+  const [gender, setGender] = useState(
+    localStorage.getItem("userGender") || ""
+  );
+  const [injuries, setInjuries] = useState(
+    localStorage.getItem("userInjuries") || ""
+  );
+
   const [loading, setLoading] = useState(false);
   const API_KEY = "YOUR_Gemini_API_KEY"; // Replace with your API key
   const navigate = useNavigate();
@@ -41,12 +48,22 @@ function WorkoutPlanner() {
     localStorage.setItem("userHeight", height);
     localStorage.setItem("userWeight", weight);
     localStorage.setItem("userAllergy", allergy);
-  }, [goal, planType, height, weight, allergy]);
+    localStorage.setItem("userGender", gender);
+    localStorage.setItem("userInjuries", injuries);
+  }, [goal, planType, height, weight, allergy, gender, injuries]);
 
   const handleGeneratePlan = async (e) => {
     e.preventDefault();
 
-    if (!goal || !planType || !height || !weight) {
+    if (
+      !goal ||
+      !planType ||
+      !height ||
+      !weight ||
+      !gender ||
+      !injuries ||
+      !allergy
+    ) {
       toast("Please fill in all required fields.");
       return;
     }
@@ -62,7 +79,7 @@ function WorkoutPlanner() {
               parts: [
                 {
                   text: `Create a ${planType} workout plan for someone focused on ${goal}. 
-                  Their height is ${height} cm, weight is ${weight} kg, and they have allergies: ${allergy}.`,
+                  Their height is ${height} cm, weight is ${weight} kg, and they have allergies: ${allergy} , and injuries: ${injuries}.`,
                 },
               ],
             },
@@ -178,6 +195,34 @@ function WorkoutPlanner() {
               value={allergy}
               onChange={(e) => setAllergy(e.target.value)}
               placeholder="List any allergies (optional)"
+            />
+          </div>
+
+          {/* Gender Selection */}
+          <div>
+            <label className="block text-gray-300">Gender</label>
+            <select
+              className="w-full p-3 mt-1 bg-gray-700 rounded-lg focus:ring-2 focus:ring-yellow-400 text-white"
+              value={gender}
+              onChange={(e) => setGender(e.target.value)}
+            >
+              <option value="">Select your gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="non_binary">Non-Binary</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          {/* Injury Input */}
+          <div>
+            <label className="block text-gray-300">Injuries (if any)</label>
+            <input
+              type="text"
+              className="w-full p-3 mt-1 bg-gray-700 rounded-lg focus:ring-2 focus:ring-yellow-400 text-white"
+              value={injuries}
+              onChange={(e) => setInjuries(e.target.value)}
+              placeholder="List any injuries (optional)"
             />
           </div>
 
