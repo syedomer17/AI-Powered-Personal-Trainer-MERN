@@ -31,10 +31,6 @@ An intelligent fitness companion designed to personalize your workout experience
 | JWT | Authentication |
 | Cloudinary | Image & video storage |
 
----
-
-## 🛠 Tech Stack
-
 ### Frontend:
 - **React** (with Vite) – Fast frontend development
 - **react-router-dom** – Client-side navigation
