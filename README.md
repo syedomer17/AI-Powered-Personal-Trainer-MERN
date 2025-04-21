@@ -58,7 +58,7 @@ An intelligent fitness companion designed to personalize your workout experience
 
 ```bash
 # Clone the repository
-git clone git@github.com:syedomer17/BackEnd-practice.git
+git clone git@github.com:syedomer17/AI-Powered-Personal-Trainer-MERN.git
 
 # Navigate to the project directory
 cd BackEnd-practice
