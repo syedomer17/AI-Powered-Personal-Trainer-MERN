@@ -61,7 +61,7 @@ An intelligent fitness companion designed to personalize your workout experience
 git clone git@github.com:syedomer17/AI-Powered-Personal-Trainer-MERN.git
 
 # Navigate to the project directory
-cd BackEnd-practice
+cd AI-Powered-Personal-Trainer-MERN
 
 # Install dependencies for the backend
 cd server
@@ -71,7 +71,7 @@ npm install
 npm start
 
 # Install dependencies for the frontend
-cd ../frontend
+cd ../client 
 npm install
 
 # Start the frontend server
