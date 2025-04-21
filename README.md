@@ -130,6 +130,7 @@ Contributions are welcome! Feel free to submit a PR or open an issue.
 ## 📜 License
 
 This project is licensed under the MIT License.
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ---
 
